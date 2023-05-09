@@ -1,0 +1,105 @@
+<div class="container">
+    <h1 class="a">EmployeeInformation</h1>
+<form #employeeForm="ngForm" (ngSubmit)="submit(employeeForm)">   
+        <div class="row">
+             <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%; margin-top: 50px;">
+                    <mat-label for="firstname">FirstName</mat-label>
+                    <input matInput type="text" required #name1="ngModel" name="FirstName"  required [(ngModel)]="FirstName">
+                </mat-form-field>
+                <span *ngIf="name1.invalid && name1.touched" style="color:red">Please provide the FirstName </span>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%; margin-top: 50px;">
+                    <mat-label for="middleName">MiddleName</mat-label>
+                    <input matInput type="text" required #name2="ngModel" name="LastName"  required [(ngModel)]="LastName">
+                </mat-form-field>
+                <span *ngIf="name2.invalid && name2.touched" style="color:red">Please provide the MiddleName </span>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%; margin-top: 50px;">
+                    <mat-label for="lastname">LastName</mat-label>
+                    <input matInput type="text" required #name3="ngModel" name="MiddleName"  required [(ngModel)]="MiddleName"> 
+                </mat-form-field>
+                <span *ngIf="name3.invalid && name3.touched" style="color:red">Please provide the LastName </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mx-2">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%;margin-top: 50px;">
+                    <mat-label for="Age">Age</mat-label>
+                    <input matInput type="text" required #name4="ngModel" name="Age"  required [(ngModel)]="Age"> 
+                </mat-form-field>
+                <span *ngIf="name4.invalid && name4.touched" style="color:red">Please provide the Age </span>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="fill" style="width:100%; margin-top: 50px;">
+                    <mat-label for="gender">Gender</mat-label>
+                    <mat-select for="gender" type="text" required #name5="ngModel" name="gender" required [(ngModel)]="Gender">
+                      <mat-option value="Male" >Male</mat-option>
+                      <mat-option value="Female" >Female</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <span *ngIf="name5.invalid && name5.touched" style="color:red">Please provide the Gender </span>
+            </div>
+            <div class="col-md-3">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%; margin-top: 50px;">
+                <mat-label for="birthday">DOB</mat-label>
+                
+                <input matInput type="text" required #name6="ngModel" name="birthday"  [(ngModel)]="Birthday">
+            </mat-form-field>
+            <span *ngIf="name6.invalid && name6.touched" style="color:red">Please provide the DOB </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width: 100%;margin-top:50px">
+                    <mat-label for="address">Address</mat-label>
+                    <input matInput type="text" required #name7="ngModel" name="address" [(ngModel)]="Address1">
+            </mat-form-field>
+            <span *ngIf="name7.invalid && name7.touched" style="color:red;">please provide the Address1</span>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width:100%;margin-top: 50px;">
+                    <mat-label for="address2">Address2</mat-label>
+                    <input matInput type="text" name="address2" required #name8="ngModel" [(ngModel)]="Address2">
+            </mat-form-field>
+            <span *ngIf="name8.invalid && name8.touched" style="color:red;">please provide address2</span>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="fill" style="width: 100%; margin-top: 50px;">
+                    <mat-label for="pincode">pincode</mat-label>
+                    <input matInput ="text" name="pincode"  required #name9="ngModel" [(ngModel)]="Address2">
+            </mat-form-field>
+            <span *ngIf="name9.invalid && name9.touched" style="color:red;">please provide the Pincode</span>
+            </div>
+        </div>
+   
+</form>
+</div>
+<div class="example">
+<button mat-raised-button color="primary" (click)="submit(employeeForm)">Submit</button>
+</div>
+
+
+
+
+    <!-- <div  class=" col-md-12 panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title"> Person Form</div>
+        </div>
+        <div class="panel-body">
+    
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input id="fullname" type="text" name="fullname" [(ngModel)]="FullName"> 
+            </div> <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" [(ngModel)]="Password">
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+    </form> -->
